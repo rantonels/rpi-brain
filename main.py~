@@ -1,0 +1,41 @@
+#!/bin/python
+
+import logging
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
+print "STARTING ONBOARD COMPUTER..."
+
+import datetime
+import time
+
+print time.strftime("%Y-%m-%d %H:%M:%S")
+
+print ""
+
+print ''' mmmmmm    mmmmmm     mmmmmm         mm  mmmmmm    mmmmmm       mm      mmmmmm   mmm   mm 
+ ##""""##  ##""""#m   ""##""        ##   ##""""##  ##""""##    ####     ""##""   ###   ## 
+ ##    ##  ##    ##     ##         ##    ##    ##  ##    ##    ####       ##     ##"#  ## 
+ #######   ######"      ##        ##     #######   #######    ##  ##      ##     ## ## ## 
+ ##  "##m  ##           ##       m#"     ##    ##  ##  "##m   ######      ##     ##  #m## 
+ ##    ##  ##         mm##mm    m#"      ##mmmm##  ##    ##  m##  ##m   mm##mm   ##   ### 
+ ""    """ ""         """"""   m#"       """""""   ""    """ ""    ""   """"""   ""   """ '''
+
+print ""
+
+print "-----------------------------------------------------------"
+
+print "*** loading interfacing submodule..."
+
+try:
+    import interface
+except ImportError:
+    print "FATAL ERROR: interface.py submodule was NOT found."
+    print "machine operation is impossible, shutting down."
+    exit()
+
+print "DONE!"
+
+
+
